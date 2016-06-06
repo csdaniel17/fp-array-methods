@@ -40,7 +40,7 @@ function writeInLeetspeak(str) {
   });
 }
 var leetspeak = writeInLeetspeak(str2);
-// console.log(leetspeak.join(''));
+console.log(leetspeak.join(''));
 
 
 // ## Basketball Players
@@ -233,7 +233,17 @@ function sumAvgPoints(arr) {
 }
 
 var sum = sumAvgPoints(players);
-// console.log(sum);
+console.log(sum);
+// var avg = sum / players.length;
+// console.log(avg);
+
+//or
+
+var avgTeamPoints = players.reduce(function(sum, player) {
+  return sum + player.avgPoints;
+}, 0);
+console.log(avgTeamPoints);
+
 
 // 7. Write a function that takes the players array and returns the sum of the avgPoints of the starters.
 
